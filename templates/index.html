@@ -1,32 +1,28 @@
 <!--
    index.html
-   
-   
-   
 -->
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html >
+<html lang="ru">
 
 <head>
 	<title>Card graal101@mail.ru</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset=utf-8" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-	<h1 style="color: silver;" > Извините, сайт находится в режиме</h1>
-   <h1 style="color: silver;">  отладки/тестирования..</h1>
-   <div class="container">
+	<h1 style="color: silver;" > Извините, сайт находится в режиме <br> отладки/тестирования..</h1>
+   <div  class="container" >
         <div class="photo-frame">
             <img src="{{ url_for('static', filename='img/berry.jpg') }}" alt="Фоновое фото"
-             style="width: 500px; height: auto;">
+             style="width: 500px; height: auto; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);">
         </div>
    </div>
 </body>
 <footer>
+        <b>"Written in Flask Python."</b>
         <p>&copy; 2025 graal101@mail.ru BuisnesCard. All rights reserved.</p>
-        <p>"Written in Flask Python."</p>
+        
 </footer>
 </html>
