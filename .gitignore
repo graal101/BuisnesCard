@@ -1,5 +1,6 @@
 .flake8
 customers.db
 visitors.db
+instance
 venv
 __pycache__
