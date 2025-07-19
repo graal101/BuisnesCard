@@ -24,7 +24,7 @@ def home():
     ip_visitor = request.headers.get('X-Real-IP')
     user_agent = request.user_agent.string
     tmstr = datetime.now(tz=pytz.timezone('Europe/Moscow')).strftime('%Y-%m-%d(%H:%M:%S)')
-    db.add_info(ip_visitor, tmstr)
+    db.add_info(ip_visitor, tmstr, user_agent)
     return render_template('index.html')
 
 
@@ -35,4 +35,4 @@ def print_sqlite():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
