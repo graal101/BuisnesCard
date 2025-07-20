@@ -28,12 +28,13 @@ class Users(db.Model):
 @app.route('/index')
 def home():
     """Home page."""
-    ip_visitor = request.headers.get('X-Real-IP')
-    user_agent = request.user_agent.string
-    tmstr = datetime.now(tz=pytz.timezone('Europe/Moscow')).strftime('%Y-%m-%d(%H:%M:%S)')
     with app.app_context():
         db.create_all()
-        new_entry = Users(ip=ip_visitor, visittime=tmstr, user_agent=user_agent)
+        new_entry = Users(
+            ip=request.headers.get('X-Real-IP'),
+            visittime=datetime.now(tz=pytz.timezone('Europe/Moscow')).strftime('%Y-%m-%d(%H:%M:%S)'),
+            user_agent=request.user_agent.string
+        )
         db.session.add(new_entry)
         db.session.commit()
     return render_template('index.html')
@@ -42,7 +43,7 @@ def home():
 @app.route('/print')
 def print_sqlite():
     """Print visitors, count."""
-    fetch_lst = []
+    # fetch_lst = []
     return render_template('print.html')
 
 
