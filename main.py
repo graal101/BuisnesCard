@@ -39,11 +39,12 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/print_sqlite3')
+@app.route('/print')
 def print_sqlite():
     """Print visitors, count."""
-    return 'sqlite3'
+    fetch_lst = []
+    return render_template('print.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
