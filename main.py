@@ -46,7 +46,7 @@ def print_sqlite():
     """Print visitors, count."""
     res = Guests.query.all()
     lst = [[person.ip, person.visittime, person.user_agent] for person in res]
-    return render_template('print.html')
+    return render_template('print.html', vst=lst)
 
 
 if __name__ == '__main__':

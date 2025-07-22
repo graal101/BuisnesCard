@@ -13,7 +13,15 @@
 
 <body>
 	<p><b>Список гостей:</b></p>
+   <ul>
+   {% for m in vst %}
+      <li style='color: green'>{{m}}</li>
+   {% endfor %}
+</ul>
    
 </body>
-
+<footer>
+        <b>"Written in Flask Python."</b>
+        <p>&copy; 2025 graal101@mail.ru BuisnesCard. All rights reserved.</p>
+</footer>
 </html>
