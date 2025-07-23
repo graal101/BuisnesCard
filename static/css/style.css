@@ -1,6 +1,7 @@
 body{
     text-align: center;
     color: silver;
+    /*border: 1px solid black; Границы контейнера*/
 }
 
 footer{
