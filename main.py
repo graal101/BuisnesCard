@@ -5,12 +5,12 @@ from datetime import datetime
 
 from flask import Flask, render_template, request
 
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy   # FIX with models.py
 
-import pytz
+import pytz  # FIX with SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///visitors.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///visitors.db'  # FIX with models.py
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Avoids a warning
 
 db = SQLAlchemy(app)
@@ -21,7 +21,7 @@ class Guests(db.Model):
 
     ids = db.Column(db.Integer, primary_key=True, autoincrement=True)
     ip = db.Column(db.String(20), unique=False, nullable=True)
-    visittime = db.Column(db.String(25), unique=False, nullable=True)
+    visittime = db.Column(db.String(25), unique=False, nullable=True)  # FIX with SQLAlchemy
     user_agent = db.Column(db.Text, unique=False, nullable=True)
 
 
