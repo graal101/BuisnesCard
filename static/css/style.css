@@ -12,3 +12,26 @@ footer{
     /*color: #FFC107*/;
 
 }
+/* Стили для кнопок соцсетей */
+.social-links {
+    display: flex; /* Используем flexbox для выравнивания кнопок */
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    gap: 15px; /* Промежуток между кнопками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.social-links a {
+    display: inline-block; /* Делаем ссылки блочными для удобства стилизации */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #000; /* Черный цвет для контуров */
+    border: 2px solid #000; /* Черная рамка */
+    background-color: transparent; /* Прозрачный фон */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругляем углы */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цвета фона и текста */
+}
+
+.social-links a:hover {
+    background-color: #000; /* Черный фон при наведении */
+    color: #fff; /* Белый цвет текста при наведении */
+}
