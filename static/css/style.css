@@ -12,26 +12,34 @@ footer{
     /*color: #FFC107*/;
 
 }
+.bordered-text {
+            border: 1px solid silver; 
+            color: black;
+            padding: 10px; /* Отступы внутри рамки */
+            display: inline-block; /* Чтобы рамка обтекала текст */
+            text-align: center;
+        }
 /* Стили для кнопок соцсетей */
-.social-links {
-    display: flex; /* Используем flexbox для выравнивания кнопок */
-    justify-content: center; /* Центрируем кнопки по горизонтали */
-    gap: 15px; /* Промежуток между кнопками */
-    margin: 20px 0; /* Отступы сверху и снизу */
-}
+.button {
+            display: inline-block; /* Чтобы кнопки располагались в ряд */
+            padding: 10px 20px; /* Внутренние отступы */
+            margin: 10px; /* Внешние отступы */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Закругленные углы */
+            color: white; /* Цвет текста */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 16px; /* Размер шрифта */
+            cursor: pointer; /* Курсор при наведении */
+        }
 
-.social-links a {
-    display: inline-block; /* Делаем ссылки блочными для удобства стилизации */
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #000; /* Черный цвет для контуров */
-    border: 2px solid #000; /* Черная рамка */
-    background-color: transparent; /* Прозрачный фон */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 5px; /* Закругляем углы */
-    transition: background-color 0.3s, color 0.3s; /* Плавный переход цвета фона и текста */
-}
+        .github {
+            background-color: #333; /* Цвет фона для GitHub */
+        }
 
-.social-links a:hover {
-    background-color: #000; /* Черный фон при наведении */
-    color: #fff; /* Белый цвет текста при наведении */
-}
+        .mail {
+            background-color: #007bff; /* Цвет фона для Mail */
+        }
+
+        .vk {
+            background-color: #4a76a8; /* Цвет фона для VK */
+        }

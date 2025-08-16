@@ -32,14 +32,6 @@ def home():
         db.session.commit()
     return render_template('index.html')
 
-'''
-@app.route('/print')
-def print_sqlite():
-    """Print visitors, count."""
-    res = Guests.query.all()
-    lst: list = [[person.ip, person.user_agent, person.visittime] for person in res]
-    return render_template('print.html', vst=lst)
-'''
 
 if __name__ == '__main__':
     app.run(debug=True)

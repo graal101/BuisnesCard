@@ -11,7 +11,6 @@ db = SQLAlchemy()
 class Guests(db.Model):
     """Reg of unique customers."""
 
-
     ids = db.Column(db.Integer, primary_key=True, autoincrement=True)
     ip = db.Column(db.String(20), unique=False, nullable=True)
     user_agent = db.Column(db.Text, unique=False, nullable=True)
